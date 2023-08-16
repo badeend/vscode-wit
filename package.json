@@ -1,0 +1,70 @@
+{
+  "name": "vscode-wit",
+  "displayName": "WebAssembly Interface Types",
+  "description": "*.wit syntax highlighting",
+  "publisher": "badeend",
+  "author": {
+    "name": "Dave Bakker"
+  },
+  "license": "MIT",
+  "icon": "logo.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "wasm",
+    "wit",
+    "webassembly",
+    "component model",
+    "idl",
+    "interface",
+    "world"
+  ],
+  "homepage": "https://github.com/badeend/vscode-wit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badeend/vscode-wit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/badeend/vscode-wit/issues"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "wit",
+      "aliases": ["WebAssembly Interface Types", "wit"],
+      "extensions": [".wit"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "wit",
+      "scopeName": "source.wit",
+      "path": "./syntaxes/wit.tmLanguage.json"
+    }]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3",
+    "@vscode/test-electron": "^2.3.2"
+  }
+}
