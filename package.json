@@ -1,14 +1,14 @@
 {
   "name": "vscode-wit",
-  "displayName": "WebAssembly Interface Types",
-  "description": "*.wit syntax highlighting",
+  "displayName": "WIT (WebAssembly Interface Types)",
+  "description": "Language support for *.wit files",
   "publisher": "badeend",
   "author": {
     "name": "Dave Bakker"
   },
   "license": "MIT",
   "icon": "logo.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.81.0"
   },

@@ -1,6 +1,6 @@
-# *.wit syntax
+# WIT (WebAssembly Interface Types)
 
-VS Code support for working with [WebAssembly Component Model Interface Types](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md)
+VS Code support for working with [WebAssembly Component Model Interface Type](https://github.com/WebAssembly/component-model/blob/main/design/mvp/WIT.md) files.
 
 ## Features:
 - `*.wit` Syntax highlighting.
@@ -13,12 +13,11 @@ VS Code support for working with [WebAssembly Component Model Interface Types](h
 
 ![demo screenshot](./screenshot.png)
 
-## Caveats
+## Known issues
 
-The official WIT specification is _very_ liberal in what text it accepts as valid input. The syntax highlighting provided by this extension only supports a subset of the full WIT syntax. Notably:
+Due to the simplicity of the current lookahead scheme, there are some limitations:
 
-
-### Braces, brackets & parentheses must open on the same line as the thing they're opening.
+### Braces, brackets & parentheses must open on the same line as the item they're opening.
 ✅ Works:
 
 ```wit
@@ -75,16 +74,4 @@ export magic: func(
 	c: u32,
 	d: u32
 )
-```
-
-### Names of declarations must appear on the same line as the preceding keyword.
-✅ Works:
-```wit
-record point { /* ... */ }
-```
-
-❌ Broken:
-```wit
-record
-point { /* ... */ }
 ```
