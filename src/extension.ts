@@ -64,7 +64,6 @@ const keywords = [
 	"import",
 	"include",
 	"interface",
-	"interface",
 	"package",
 	"record",
 	"resource",
