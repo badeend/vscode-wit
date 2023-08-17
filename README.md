@@ -17,32 +17,31 @@ VS Code support for working with [WebAssembly Component Model Interface Type](ht
 
 Due to the simplicity of the current lookahead scheme, there are some limitations:
 
-### Braces, brackets & parentheses must open on the same line as the item they're opening.
+### Parentheses and brackets must open on the same line as the item they're opening.
+
+Curly braces work fine, though.
+
 ✅ Works:
 
 ```wit
-enum state {
-	open,
-	closed
-}
-
 export log: func(
 	msg: string
-) -> result<_ err>
+) -> result<
+	_,
+	err
+>
 ```
 
 ❌ Broken:
 ```wit
-enum state
-{
-	open,
-	closed
-}
-
 export log: func
 (
 	msg: string
-) -> result<_ err>
+) -> result
+<
+	_,
+	err
+>
 ```
 
 ### Return type annotations must start on the same line as the closing parenthesis of the parameter list.

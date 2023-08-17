@@ -151,7 +151,7 @@
 					"name": "entity.name.type.wit"
 				}
 			},
-			"end": "(?=[\n\r;,\\]\\)}>])",
+			"end": "(?<=[\\}])|(?=[;,\\]\\)}>])|(?=^\\s*(export|import|include|package|type|use|enum|flags|interface|record|resource|union|variant|world))",
 			"patterns": [
 				{
 					"include": "#block-content"
@@ -171,7 +171,7 @@
 					"name": "entity.name.type.wit"
 				}
 			},
-			"end": "(?=[\n\r;,\\]\\)}>])",
+			"end": "(?<=[\\}])|(?=[;,\\]\\)}>])|(?=^\\s*(export|import|include|package|type|use|enum|flags|interface|record|resource|union|variant|world))",
 			"patterns": [
 				{
 					"begin": "\\{",
@@ -223,7 +223,7 @@
 					"name": "entity.name.type.wit"
 				}
 			},
-			"end": "(?=[\n\r;,\\]\\)}>])",
+			"end": "(?<=[\\}])|(?=[;,\\]\\)}>])|(?=^\\s*(export|import|include|package|type|use|enum|flags|interface|record|resource|union|variant|world))",
 			"patterns": [
 				{
 					"begin": "\\{",
@@ -396,7 +396,7 @@
 					"name": "keyword.other.interface.wit"
 				}
 			},
-			"end": "(?=[\n\r;,\\]\\)}>])",
+			"end": "(?<=[\\}])|(?=[;,\\]\\)}>])|(?=^\\s*(export|import|include|package|type|use|enum|flags|interface|record|resource|union|variant|world))",
 			"patterns": [
 				{
 					"include": "#block-content"
